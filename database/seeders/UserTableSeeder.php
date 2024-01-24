@@ -16,23 +16,23 @@ class UserTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $admin = User::create([
-                'name'  => 'Admin',
-                'email' => 'admin@gmail.com',
-                'password'  => bcrypt('1234'),
-                'role'  => 'admin'
-        ]);
+        // $admin = User::create([
+        //         'name'  => 'Admin',
+        //         'email' => 'admin@gmail.com',
+        //         'password'  => bcrypt('password'),
+        //         'role'  => 'admin'
+        // ]);
 
-        $admin->assignRole('admin');
+        // $admin->assignRole('admin');
 
-        $user = User::create([
-                'name'  => 'Anggota',
-                'email' => 'anggota@gmail.com',
-                'password'  => bcrypt('1234'),
-                'role'  => 'anggota'
-        ]);
+        // $user = User::create([
+        //         'name'  => 'Anggota',
+        //         'email' => 'anggota@gmail.com',
+        //         'password'  => bcrypt('password'),
+        //         'role'  => 'anggota'
+        // ]);
 
-        $user->assignRole('anggota');
+        // $user->assignRole('anggota');
 
         $role = Role::find(1);
         $permissions = permission::all();
