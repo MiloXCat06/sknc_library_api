@@ -33,5 +33,13 @@ class UserTableSeeder extends Seeder
         ]);
 
         $user->assignRole('anggota');
+
+        $role = Role::find(1);
+        $permissions = permission::all();
+
+        $role->syncPermissions($permissions);
+
+        $user = User::find(1);
+        $user->assignRole($role->name);
     }
 }

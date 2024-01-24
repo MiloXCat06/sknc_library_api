@@ -15,12 +15,12 @@ class RolesTableSeeder extends Seeder
     {
         Role::create([
             'name'  => 'admin',
-            'guard_name'  => 'web',
+            'guard_name'  => 'api',
         ]);
 
         Role::create([
             'name'  => 'user',
-            'guard_name'  => 'web',
+            'guard_name'  => 'api',
         ]);
     }
 }

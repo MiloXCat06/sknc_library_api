@@ -13,6 +13,14 @@ class PermissionsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+         //permission for permissions
+        Permission::create(['name' => 'permissions.index', 'guard_name' => 'api']);
+
+         //permission for users
+        Permission::create(['name' => 'users.index', 'guard_name' => 'api']);
+        Permission::create(['name' => 'users.create', 'guard_name' => 'api']);
+        Permission::create(['name' => 'users.edit', 'guard_name' => 'api']);
+        Permission::create(['name' => 'users.delete', 'guard_name' => 'api']);
     }
+    
 }
